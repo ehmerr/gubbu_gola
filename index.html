@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>A Proof I Owe You</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='3' y='3' width='10' height='10' rx='1' fill='%23a8445a'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+  <script defer src="js/content.js"></script>
+  <script defer src="js/puzzles.js"></script>
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+  <main id="app" class="page">
+
+    <!-- Screen 0: the theorem -->
+    <section id="screen-opening" class="screen" aria-labelledby="opening-heading">
+      <p id="opening-eyebrow" class="eyebrow"></p>
+      <h1 id="opening-heading" class="theorem-label" tabindex="-1"></h1>
+      <p id="opening-theorem" class="theorem"></p>
+      <div id="opening-own" class="own-words"></div>
+      <div id="opening-letter"></div>
+      <p id="opening-transition" class="proof-start"></p>
+      <div class="actions">
+        <button id="continue-btn" class="btn btn-primary" type="button" hidden></button>
+        <button id="begin-btn" class="btn btn-primary" type="button"></button>
+      </div>
+      <noscript><p>This page needs JavaScript to show the proof.</p></noscript>
+    </section>
+
+    <!-- Screens 1 to 5: lemmas, built by js/main.js -->
+    <div id="lemmas"></div>
+
+    <!-- Screen 6: the finale -->
+    <section id="screen-finale" class="screen" aria-labelledby="finale-heading" hidden>
+      <h2 id="finale-heading" class="qed-heading" tabindex="-1"><span class="qed-mark" aria-hidden="true">∎</span> <span id="finale-heading-text"></span></h2>
+      <canvas id="finale-canvas" class="curve-canvas curve-canvas-wide" role="img"></canvas>
+      <div id="finale-formula" class="formula"></div>
+      <div id="finale-message" class="message finale-text"></div>
+      <p id="finale-closing" class="closing finale-text"></p>
+      <p id="finale-signature" class="signature finale-text"></p>
+      <p class="small-link-row"><button id="read-again-btn" class="link-btn" type="button"></button></p>
+    </section>
+
+    <!-- Screen 7: every note, in order -->
+    <section id="screen-full" class="screen" aria-labelledby="full-heading" hidden>
+      <h2 id="full-heading" tabindex="-1"></h2>
+      <div id="full-body"></div>
+      <p class="qed-end" aria-hidden="true">∎</p>
+      <p class="small-link-row"><button id="back-to-end-btn" class="link-btn" type="button"></button></p>
+    </section>
+
+  </main>
+</body>
+</html>
